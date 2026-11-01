@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f6f7f9" />
+  <meta name="description" content="Balance helps people teams spot retention risk early and take thoughtful action." />
+  <title>Balance — People intelligence</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#overview" aria-label="Balance home"><span class="brand-mark"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 4v23M7 9h18M9 9l-5 9h10L9 9Zm14 0-5 9h10l-5-9ZM10 27h12"/></svg></span><span>balance<span class="brand-dot">.</span></span></a>
+      <div class="workspace-label">WORKSPACE</div>
+      <button class="workspace-switch"><span class="workspace-avatar">N</span><span class="workspace-copy"><strong>Northstar BPO</strong><small>People operations</small></span><span class="chevron">⌄</span></button>
+      <div class="nav-group"><div class="nav-caption">MENU</div>
+        <button class="nav-item active" data-view="overview"><span class="nav-icon">▦</span> Overview</button>
+        <button class="nav-item" data-view="people"><span class="nav-icon">♙</span> People <span class="nav-count">12</span></button>
+        <button class="nav-item" data-view="insights"><span class="nav-icon">⌁</span> Insights</button>
+        <button class="nav-item" data-view="accounts"><span class="nav-icon">▤</span> Client accounts</button>
+      </div>
+      <div class="nav-group tools-group"><div class="nav-caption">TOOLS</div>
+        <button class="nav-item" data-view="playbooks"><span class="nav-icon">✳</span> Retention playbooks</button>
+        <button class="nav-item" data-view="reports"><span class="nav-icon">▧</span> Reports</button>
+      </div>
+      <div class="sidebar-bottom"><div class="help-card"><div class="help-icon">✦</div><strong>Make room for better work</strong><p>Small, timely actions can make a big difference.</p><button id="learnMore">Explore the playbook <span>↗</span></button></div><button class="nav-item settings-item"><span class="nav-icon">⚙</span> Settings</button><div class="profile"><div class="profile-avatar">AM</div><span><strong>Alex Morgan</strong><small>People lead</small></span><span class="profile-more">···</span></div></div>
+    </aside>
+    <main class="main-area">
+      <header class="topbar"><button class="mobile-menu" id="menuToggle" aria-label="Open navigation">☰</button><div class="crumb">Northstar BPO <span>/</span> <strong id="crumbCurrent">Overview</strong></div><div class="top-actions"><span class="updated"><i></i> Updated 9:41 AM</span><button class="icon-button" aria-label="Search" id="searchFocus">⌕</button><button class="icon-button notification" aria-label="Notifications">♧<b></b></button><div class="top-avatar">AM</div></div></header>
+      <section class="content">
+        <div class="page-heading"><div><div class="eyebrow">SUNDAY, NOVEMBER 1, 2026 <span class="live-pill"><i></i> LIVE OVERVIEW</span></div><h1 id="pageTitle">A healthier team starts here.</h1><p id="pageSub">See the signals, understand the story, and make a difference.</p></div><div class="heading-actions"><button class="button secondary" id="periodButton">Last 30 days <span>⌄</span></button><button class="button primary" id="exportButton"><span>↓</span> Export report</button></div></div>
+        <div class="summary-strip"><div class="summary-icon">✳</div><div><strong>Your team is showing positive momentum</strong><span>Retention risk is down <b>4.2%</b> compared with last month. Keep the conversations going.</span></div><button class="summary-link" data-view="insights">View insights <span>→</span></button><button class="summary-close" aria-label="Dismiss">×</button></div>
+        <div class="section-title"><div><h2>At a glance</h2><p>People signals across your organization</p></div><button class="text-button" data-view="reports">View all metrics <span>→</span></button></div>
+        <div class="metric-grid">
+          <article class="metric-card"><div class="metric-top"><span>Team members</span><span class="metric-icon people-icon">♙</span></div><div class="metric-value">1,284</div><div class="metric-foot"><span class="trend positive">↗ 6.8%</span><span>vs. last month</span></div><div class="sparkline teal"><svg viewBox="0 0 100 30" preserveAspectRatio="none"><path d="M0 24 C12 22 12 16 24 19 S39 23 49 13 S65 17 72 10 S88 16 100 4"/></svg></div></article>
+          <article class="metric-card"><div class="metric-top"><span>At-risk teammates</span><span class="metric-icon risk-icon">⌁</span></div><div class="metric-value">18 <small>people</small></div><div class="metric-foot"><span class="trend positive">↘ 4.2%</span><span>vs. last month</span></div><div class="sparkline coral"><svg viewBox="0 0 100 30" preserveAspectRatio="none"><path d="M0 6 C12 10 14 8 24 13 S38 9 49 18 S63 12 72 20 S89 13 100 25"/></svg></div></article>
+          <article class="metric-card"><div class="metric-top"><span>Retention rate</span><span class="metric-icon retain-icon">↗</span></div><div class="metric-value">94.6<small>%</small></div><div class="metric-foot"><span class="trend positive">↗ 1.3%</span><span>vs. last month</span></div><div class="sparkline violet"><svg viewBox="0 0 100 30" preserveAspectRatio="none"><path d="M0 23 C12 21 15 25 25 15 S42 23 52 13 S66 19 77 9 S89 11 100 3"/></svg></div></article>
+          <article class="metric-card"><div class="metric-top"><span>Interventions made</span><span class="metric-icon action-icon">✳</span></div><div class="metric-value">36</div><div class="metric-foot"><span class="trend positive">↗ 12.5%</span><span>vs. last month</span></div><div class="sparkline gold"><svg viewBox="0 0 100 30" preserveAspectRatio="none"><path d="M0 25 C10 24 17 16 26 20 S42 12 50 16 S64 8 76 12 S91 5 100 3"/></svg></div></article>
+        </div>
+        <div class="dashboard-grid">
+          <article class="panel trend-panel"><div class="panel-heading"><div><h2>Retention over time</h2><p>A steady view of team health</p></div><button class="select-button" id="chartPeriod">This year <span>⌄</span></button></div><div class="chart-legend"><span><i class="legend-retention"></i> Retention rate</span><span><i class="legend-target"></i> Team average</span></div><div class="chart-wrap"><div class="y-labels"><span>100%</span><span>95%</span><span>90%</span><span>85%</span><span>80%</span></div><div class="chart-area"><div class="grid-lines"><i></i><i></i><i></i><i></i><i></i></div><svg class="main-chart" viewBox="0 0 700 210" preserveAspectRatio="none" aria-label="Retention rate trend chart"><defs><linearGradient id="areaFill" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#46a998" stop-opacity=".18"/><stop offset="1" stop-color="#46a998" stop-opacity="0"/></linearGradient></defs><path class="area" d="M0 133 C45 117 52 121 90 111 S150 129 190 100 S253 111 290 88 S351 102 390 76 S450 91 487 67 S550 77 585 51 S651 68 700 36 V210 H0Z"/><path class="avg-line" d="M0 112 H700"/><path class="trend-line" d="M0 133 C45 117 52 121 90 111 S150 129 190 100 S253 111 290 88 S351 102 390 76 S450 91 487 67 S550 77 585 51 S651 68 700 36"/><circle cx="700" cy="36" r="5" class="chart-dot"/></svg><div class="x-labels"><span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span><span>Jul</span><span>Aug</span><span>Sep</span><span>Oct</span></div></div></div></article>
+          <article class="panel drivers-panel"><div class="panel-heading"><div><h2>What shapes retention</h2><p>Top signals this month</p></div><button class="dots-button" aria-label="More options">···</button></div><div class="drivers"><div class="driver"><div class="driver-head"><span><i class="driver-dot dot-purple"></i> Workload &amp; wellbeing</span><b>38%</b></div><div class="progress"><i style="width:38%" class="bar-purple"></i></div><small>+ 6% from last month</small></div><div class="driver"><div class="driver-head"><span><i class="driver-dot dot-blue"></i> Career growth</span><b>29%</b></div><div class="progress"><i style="width:29%" class="bar-blue"></i></div><small>− 2% from last month</small></div><div class="driver"><div class="driver-head"><span><i class="driver-dot dot-orange"></i> Compensation</span><b>21%</b></div><div class="progress"><i style="width:21%" class="bar-orange"></i></div><small>+ 1% from last month</small></div><div class="driver"><div class="driver-head"><span><i class="driver-dot dot-green"></i> Team connection</span><b>12%</b></div><div class="progress"><i style="width:12%" class="bar-green"></i></div><small>− 3% from last month</small></div></div><div class="driver-note"><span>✦</span><p><b>One thing to know</b><br/>Workload has emerged as the leading signal. A check-in can be a good place to start.</p></div></article>
+        </div>
+        <article class="panel people-panel"><div class="panel-heading people-heading"><div><h2>People who may need a check-in</h2><p>Thoughtful conversations make the biggest difference</p></div><button class="text-button" data-view="people">See all people <span>→</span></button></div><div class="table-tools"><label class="search-box"><span>⌕</span><input id="peopleSearch" type="search" placeholder="Search people..." aria-label="Search people" /></label><button class="filter-button" id="filterButton">☷ <span>Filter</span><b>2</b></button><span class="table-count" id="peopleCount">Showing 4 of 18</span></div><div class="table-scroll"><table><thead><tr><th>TEAM MEMBER</th><th>TEAM</th><th>RETENTION SIGNAL</th><th>CHANGE</th><th>LAST CHECK-IN</th><th></th></tr></thead><tbody id="peopleRows"></tbody></table></div><div class="panel-footer"><span>Last refreshed today at 9:41 AM</span><button class="text-button" data-view="people">View people directory <span>→</span></button></div></article>
+        <footer class="footer"><span>© 2026 Balance Intelligence</span><span>People-first insights, always.</span><a href="#privacy">Privacy &amp; trust</a></footer>
+      </section>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <div class="modal-backdrop" id="modalBackdrop"><div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><button class="modal-close" id="modalClose" aria-label="Close">×</button><div class="modal-symbol" id="modalSymbol">✳</div><div class="modal-eyebrow" id="modalEyebrow">A THOUGHTFUL NEXT STEP</div><h2 id="modalTitle">Start with a conversation</h2><p id="modalBody">A simple check-in can help someone feel heard. Choose a low-pressure next step that works for you both.</p><div class="modal-actions"><button class="button secondary" id="modalCancel">Maybe later</button><button class="button primary" id="modalConfirm">Plan a check-in</button></div></div></div>
+  <script src="app.js"></script>
+</body>
+</html>
