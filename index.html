@@ -12,11 +12,38 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <section class="gate-screen" id="loginScreen" aria-labelledby="loginTitle">
+    <div class="gate-card login-card">
+      <a class="brand gate-brand" href="#"><span class="brand-mark"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 4v23M7 9h18M9 9l-5 9h10L9 9Zm14 0-5 9h10l-5-9ZM10 27h12"/></svg></span><span>balance<span class="brand-dot">.</span></span></a>
+      <div class="gate-symbol">✳</div>
+      <div class="gate-eyebrow">WELCOME TO BALANCE</div>
+      <h1 id="loginTitle">A little more balance,<br/>every day.</h1>
+      <p class="gate-description">A clearer view of how your team is doing, so you can be there when it matters.</p>
+      <label class="gate-label" for="demoEmail">Work email</label>
+      <input class="gate-input" id="demoEmail" type="email" value="alex@northstar.example" autocomplete="off" />
+      <label class="gate-label" for="demoPassword">Password</label>
+      <input class="gate-input" id="demoPassword" type="password" value="balancedemo" autocomplete="off" />
+      <button class="button primary gate-submit" id="demoLogin">Continue to Balance <span>→</span></button>
+      <div class="demo-note"><span>✓</span> Demo sign-in · No account needed</div>
+      <div class="gate-footer">A people-first way to work.</div>
+    </div>
+    <div class="gate-art"><div class="art-circle circle-one"></div><div class="art-circle circle-two"></div><div class="art-note"><span>✦</span><strong>Good work starts<br/>with good people.</strong><small>Make space for what matters.</small></div><div class="art-bottom">PEOPLE · PURPOSE · POSSIBILITY</div></div>
+  </section>
+  <section class="gate-screen role-screen" id="roleScreen" aria-labelledby="roleTitle" hidden>
+    <div class="role-top"><a class="brand gate-brand" href="#"><span class="brand-mark"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 4v23M7 9h18M9 9l-5 9h10L9 9Zm14 0-5 9h10l-5-9ZM10 27h12"/></svg></span><span>balance<span class="brand-dot">.</span></span></a><button class="signout-link" id="backToLogin">← Sign out</button></div>
+    <div class="role-content"><div class="gate-eyebrow">NORTHSTAR BPO · YOUR WORKSPACE</div><h1 id="roleTitle">Where would you like to start?</h1><p class="gate-description">Choose the view that best fits your day.</p>
+      <div class="role-grid">
+        <button class="role-card" data-role="operations"><span class="role-icon role-blue">♙</span><span class="role-name">Operations manager</span><span class="role-description">Check in on your team and see who may need support.</span><span class="role-enter">Go to team overview <b>→</b></span></button>
+        <button class="role-card" data-role="people"><span class="role-icon role-violet">✳</span><span class="role-name">People &amp; HR</span><span class="role-description">See the bigger picture across teams and track progress.</span><span class="role-enter">Go to people overview <b>→</b></span></button>
+        <button class="role-card" data-role="clients"><span class="role-icon role-green">▤</span><span class="role-name">Client accounts</span><span class="role-description">Keep an eye on account health and team coverage.</span><span class="role-enter">Go to account overview <b>→</b></span></button>
+      </div><div class="role-help">Not sure? <b>Operations manager</b> is a good place to start.</div>
+    </div><div class="role-footer">Balance · People-first insights, always.</div>
+  </section>
   <div class="app-shell">
     <aside class="sidebar" id="sidebar">
       <a class="brand" href="#overview" aria-label="Balance home"><span class="brand-mark"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 4v23M7 9h18M9 9l-5 9h10L9 9Zm14 0-5 9h10l-5-9ZM10 27h12"/></svg></span><span>balance<span class="brand-dot">.</span></span></a>
       <div class="workspace-label">WORKSPACE</div>
-      <button class="workspace-switch"><span class="workspace-avatar">N</span><span class="workspace-copy"><strong>Northstar BPO</strong><small>People operations</small></span><span class="chevron">⌄</span></button>
+      <button class="workspace-switch" id="switchRole"><span class="workspace-avatar">N</span><span class="workspace-copy"><strong>Northstar BPO</strong><small id="roleLabel">Operations manager</small></span><span class="chevron">⌄</span></button>
       <div class="nav-group"><div class="nav-caption">MENU</div>
         <button class="nav-item active" data-view="overview"><span class="nav-icon">▦</span> Overview</button>
         <button class="nav-item" data-view="people"><span class="nav-icon">♙</span> People <span class="nav-count">12</span></button>
@@ -27,7 +54,7 @@
         <button class="nav-item" data-view="playbooks"><span class="nav-icon">✳</span> Retention playbooks</button>
         <button class="nav-item" data-view="reports"><span class="nav-icon">▧</span> Reports</button>
       </div>
-      <div class="sidebar-bottom"><div class="help-card"><div class="help-icon">✦</div><strong>Make room for better work</strong><p>Small, timely actions can make a big difference.</p><button id="learnMore">Explore the playbook <span>↗</span></button></div><button class="nav-item settings-item"><span class="nav-icon">⚙</span> Settings</button><div class="profile"><div class="profile-avatar">AM</div><span><strong>Alex Morgan</strong><small>People lead</small></span><span class="profile-more">···</span></div></div>
+      <div class="sidebar-bottom"><div class="help-card"><div class="help-icon">✦</div><strong>Make room for better work</strong><p>Small, timely actions can make a big difference.</p><button id="learnMore">Explore the playbook <span>↗</span></button></div><button class="nav-item settings-item"><span class="nav-icon">⚙</span> Settings</button><button class="profile" id="signOut"><span class="profile-avatar">AM</span><span><strong>Alex Morgan</strong><small id="profileRole">Operations manager</small></span><span class="profile-more">↪</span></button></div>
     </aside>
     <main class="main-area">
       <header class="topbar"><button class="mobile-menu" id="menuToggle" aria-label="Open navigation">☰</button><div class="crumb">Northstar BPO <span>/</span> <strong id="crumbCurrent">Overview</strong></div><div class="top-actions"><span class="updated"><i></i> Updated 9:41 AM</span><button class="icon-button" aria-label="Search" id="searchFocus">⌕</button><button class="icon-button notification" aria-label="Notifications">♧<b></b></button><div class="top-avatar">AM</div></div></header>
