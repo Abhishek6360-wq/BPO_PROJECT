@@ -12,4 +12,4 @@ Import this repository into Vercel and keep the project preset set to **Other**.
 
 ## Demo behavior
 
-The sign-in is a visual demo only; any visitor can continue without an account and choose Operations, People & HR, or Client Accounts. Dashboard figures and teammate profiles are sample data. Search, navigation, period controls, report feedback, and check-in actions are frontend interactions; no employee data is stored or sent to a backend.
+The sign-in is a visual demo only; any visitor can continue without an account and choose Operations, People & HR, or Client Accounts. Each role has its own dashboard. Figures and teammate profiles are sample data. Manager escalation choices for HR and WFM are demonstrations only and do not send requests. No employee data is stored or sent to a backend.
